@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settingFragment">
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:checkedButton="@id/rdoBtnWhite">
+
+        <RadioButton
+            android:id="@+id/rdoBtnWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="white" />
+
+        <RadioButton
+            android:id="@+id/rdoBtnRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red" />
+
+        <RadioButton
+            android:id="@+id/rdoBtnPink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pink" />
+
+        <RadioButton
+            android:id="@+id/rdoBtnPurple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Purple" />
+
+        <RadioButton
+            android:id="@+id/rdoBtnYellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yellow" />
+
+        <RadioButton
+            android:id="@+id/rdoBtnOrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orange" />
+
+
+        <RadioButton
+            android:id="@+id/rdoBtnGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green" />
+
+        <RadioButton
+            android:id="@+id/rdoBtnGray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gray" />
+    </RadioGroup>
+</FrameLayout>

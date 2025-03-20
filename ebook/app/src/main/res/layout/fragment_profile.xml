@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileFragment">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtPhone"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="160dp"
+        android:text="Login" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLastName"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="43dp"
+        android:layout_toEndOf="@+id/edtPhone"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtName"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="45dp"
+        android:layout_toEndOf="@+id/edtLastName"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtLastName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="PhoneNumber"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="38dp"
+        android:layout_toEndOf="@+id/edtName"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+</RelativeLayout>
