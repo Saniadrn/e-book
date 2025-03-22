@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/txtPhone"
-        android:layout_width="170dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtLastName"
         android:layout_marginStart="12dp"
@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/txtLastName"
-        android:layout_width="170dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtName"
         android:layout_marginStart="12dp"
@@ -47,7 +47,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="25dp"
-        android:ems="10"
+        android:ems="6"
         android:hint="Last Name"
         android:inputType="text" />
 
@@ -59,7 +59,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="25dp"
-        android:ems="10"
+        android:ems="6"
         android:hint="Name"
         android:inputType="text" />
 
@@ -71,13 +71,13 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="2dp"
         android:layout_marginTop="25dp"
-        android:ems="10"
+        android:ems="6"
         android:hint="PhoneNumber"
         android:inputType="phone" />
 
     <TextView
         android:id="@+id/txtName"
-        android:layout_width="170dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="12dp"
