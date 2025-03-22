@@ -8,7 +8,7 @@
     <RadioGroup
         android:id="@+id/rg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="459dp"
         android:layout_marginTop="70dp"
         android:checkedButton="@id/rdoBtnWhite">
 
@@ -60,5 +60,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Gray" />
+
+        <RadioButton
+            android:id="@+id/rdoReadingMood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reading Mood"
+            android:textStyle="bold|italic" />
     </RadioGroup>
 </FrameLayout>
