@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF9F9"
-    android:backgroundTint="#FFFFFD"
     tools:context=".profileFragment">
 
     <Button
@@ -23,28 +21,6 @@
         android:textAlignment="center"
         android:textStyle="bold|italic"
         app:iconTint="#8BC34A" />
-
-    <TextView
-        android:id="@+id/txtPhone"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtLastName"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="43dp"
-        android:layout_toEndOf="@+id/edtPhone"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/txtLastName"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtName"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="45dp"
-        android:layout_toEndOf="@+id/edtLastName"
-        android:textAlignment="center"
-        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/edtLastName"
@@ -88,17 +64,6 @@
         android:hint="PhoneNumber"
         android:inputType="phone" />
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="38dp"
-        android:layout_toEndOf="@+id/edtName"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
     <ImageView
         android:id="@+id/imgprofile"
         android:layout_width="wrap_content"
@@ -119,6 +84,6 @@
         android:layout_marginStart="123dp"
         android:layout_marginTop="22dp"
         android:layout_marginEnd="138dp"
-        android:src="@android:drawable/divider_horizontal_dim_dark" />
+        />
 
 </RelativeLayout>

@@ -42,9 +42,6 @@ public class profileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_profile, container, false);
-        txtName=view.findViewById(R.id.txtName);
-        txtLastName=view.findViewById(R.id.txtLastName);
-        txtPhone=view.findViewById(R.id.txtPhone);
         edtName=view.findViewById(R.id.edtName);
         edtLastName=view.findViewById(R.id.edtLastName);
         edtPhone=view.findViewById(R.id.edtPhone);
@@ -57,9 +54,6 @@ public class profileFragment extends Fragment {
             public void onClick(View v) {
 
                 if(!(edtName.getText().toString().isEmpty())&&!(edtLastName.getText().toString().isEmpty())&&!(edtPhone.getText().toString().isEmpty())){
-                    txtName.setText(edtName.getText().toString());
-                    txtLastName.setText(edtLastName.getText().toString());
-                    txtPhone.setText(edtPhone.getText().toString());
                     Toast.makeText(getContext(),"Login successful!",Toast.LENGTH_LONG).show();
                     imgseccessful.setImageResource(R.drawable.seccessful);
                 }else{
