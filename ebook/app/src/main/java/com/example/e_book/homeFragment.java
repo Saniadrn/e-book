@@ -14,8 +14,9 @@ import java.util.Arrays;
 
 
 public class homeFragment extends Fragment {
-    ArrayList<String> genre;
+
     ListView genre_listView;
+    ArrayList<CustomListview> itemListview;
 
 
 
@@ -28,10 +29,17 @@ public class homeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_home, container, false);
         genre_listView=view.findViewById(R.id.Home_genre_lv);
-        genre=new ArrayList<String>(Arrays.asList("Mystery","Romance","Comics","Fantasy"));
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,genre);
+        fillList();
+        MyArrayAdapterCustomListview adapter=new MyArrayAdapterCustomListview(getActivity(),R.layout.custom_listview_item,itemListview);
         genre_listView.setAdapter(adapter);
 
         return view;
+    }
+    private void fillList() {
+        itemListview= new ArrayList<CustomListview>();
+        itemListview.add(new CustomListview(R.drawable.mystery,"Mystery"));
+        itemListview.add(new CustomListview(R.drawable.romance,"Romance"));
+        itemListview.add(new CustomListview(R.drawable.fantasy,"Fantasy"));
+        itemListview.add(new CustomListview(R.drawable.comics,"Comics"));
     }
 }
