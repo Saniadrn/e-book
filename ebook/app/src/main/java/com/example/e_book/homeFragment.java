@@ -30,7 +30,7 @@ public class homeFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_home, container, false);
         genre_listView=view.findViewById(R.id.Home_genre_lv);
         fillList();
-        MyArrayAdapterCustomListview adapter=new MyArrayAdapterCustomListview(getActivity(),R.layout.custom_listview_item,itemListview);
+        MyArrayAdapterCustomListview adapter=new MyArrayAdapterCustomListview(getActivity(),R.layout.custom_listview_item,itemListview,getParentFragmentManager());
         genre_listView.setAdapter(adapter);
 
         return view;

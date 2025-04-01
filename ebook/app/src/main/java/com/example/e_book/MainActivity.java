@@ -58,24 +58,6 @@ public class MainActivity extends AppCompatActivity {
         //adding home as default
         bottomNavigationView.setSelectedItemId(R.id.home_icon);
 
-        //ke dobare baz nashe
-        bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
-            @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
-
-            }
-        });
-
-
-
-
-
-
-
-
-//        pdf=findViewById(R.id.pdf);
-//        pdf.fromAsset("Riazi.pdf").load();
-
 
     }
 
