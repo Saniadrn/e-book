@@ -36,17 +36,28 @@ public class PdfViewerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pdf_viewer);
 
         pdfView = findViewById(R.id.pdfView);
-        progressBar=findViewById(R.id.progressBar);
+        progressBar=findViewById(R.id.progressBar);// the Image of Loading
         progressBar.setVisibility(View.VISIBLE);
+        //progressBar.setVisibility(View.VISIBLE)   --> یعنی نمایش داده شود
 
         Log.d("PDF_DEBUG","Dpdftask ejra shod");
+        //Log.d("PDF_DEBUG","Dpdftask ejra shod")  --> ثبت یک پیغام در Logcat به منظور اشکال زدایی
 
 
 
 
-        pdfUrl = getIntent().getStringExtra("PDF_URL");
-        Log.d("PDF_URL","link daryaft shod"+pdfUrl);
+        pdfUrl = getIntent().getStringExtra("PDF_URL");//گرفتن یک داده جابه جا شده بین اکتیویتی ها از نوع رشته
+        Log.d("PDF_URL","link daryaft shod"+pdfUrl);//ثبت یک پیغام در Logcat به منظور اشکال زدایی
         new DownloadPdfTask().execute(pdfUrl);
+        //new DownloadPdfTask()  --> مسِئول دانلود فایل پی دی اف از URL
+        //.execute(pdfUrl)       --> مسئول ارسال pdfurl به عنوان ارگومان
+
+        //سه خط کد با هم یک جریان کلی زیر را انجام می‌دهند:
+        //۱. یک URL برای یک فایل PDF از intent دریافت می‌شود.
+        //۲.
+        //URL دریافت شده در Logcat ثبت می‌شود تا توسعه‌دهنده بتواند آن را بررسی کند.
+        //۳.
+        //یک task جداگانه (در یک thread پس‌زمینه) برای دانلود فایل PDF با استفاده از URL دریافت شده، شروع می‌شود.
 
     }
 

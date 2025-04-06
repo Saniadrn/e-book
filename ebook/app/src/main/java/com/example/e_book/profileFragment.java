@@ -38,6 +38,7 @@ public class profileFragment extends Fragment {
 
     public profileFragment() {
         // Required empty public constructor
+        //سازنده خالی
     }
 
 
@@ -47,6 +48,13 @@ public class profileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_profile, container, false);
         SetupView(view);
+        //View view                 --> ساخت یک شی از کلاس View
+        //inflater.inflate          --> کار اصلی برنامه مارا انحام می دهد تبدیل فایل های لایه دیزاین(لایه رابط کاربری) به اشیا ویو
+        //R.layout.fragment_profile --> ادرس فرگمنت مورد نظر
+        //container                 --> محل قرار گیری ویو های جدید را مشخص می کند که به صورت خودکار به ویو
+        // که انفلیت شده متصل نمی شود و پارامتر بعدی این مورد را تعییت می کند
+        //attachToRoot : false      -->  متصل نشودcontainer یعنی ویو انفایت شده بلافاصله به
+        //SetupView(view)           --> پیکربندی ویو انفلیت شده
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
@@ -57,6 +65,7 @@ public class profileFragment extends Fragment {
                     if(!(edtName.getText().toString().isEmpty())&&!(edtLastName.getText().toString().isEmpty())&&!(edtPhone.getText().toString().isEmpty())){
                         Toast.makeText(getContext(),"Login successful!",Toast.LENGTH_LONG).show();
                         imgseccessful.setImageResource(R.drawable.seccessful);
+                        //در ایم بخش اگر همه ادیت تکست ها پر بودند یک پیغام موفقیت امیز و عکس نمایش می دهد
                     }else{
                         Toast.makeText(getContext(),"Login failed.Please fill all the requierd fields.",Toast.LENGTH_LONG).show();
                     }

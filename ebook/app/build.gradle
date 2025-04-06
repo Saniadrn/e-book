@@ -34,7 +34,7 @@ dependencies {
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
-
+//  کتابخانه هایی که اضافه کردیم
     implementation "com.github.barteksc:android-pdf-viewer:2.8.2"
 
     implementation "com.squareup.okhttp3:okhttp:4.9.1"

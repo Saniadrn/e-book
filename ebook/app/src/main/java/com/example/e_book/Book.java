@@ -8,7 +8,7 @@ public class Book {
     public Book(String title, int img,String pdfUrl ) {
         this.pdfUrl = pdfUrl;
         this.img = img;
-        this.title = title;
+        this.title = title;//constructor
     }
 
     public String getTitle() {

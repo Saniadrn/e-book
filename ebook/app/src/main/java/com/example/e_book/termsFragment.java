@@ -32,6 +32,13 @@ public class termsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_terms, container, false);
+        //View view                 --> ساخت یک شی از کلاس View
+        //inflater.inflate          --> کار اصلی برنامه مارا انحام می دهد تبدیل فایل های لایه دیزاین(لایه رابط کاربری) به اشیا ویو
+        //container                 --> محل قرار گیری ویو های جدید را مشخص می کند که به صورت خودکار به ویو
+        // که انفلیت شده متصل نمی شود و پارامتر بعدی این مورد را تعییت می کند
+        //attachToRoot : false      -->  متصل نشودcontainer یعنی ویو انفایت شده بلافاصله به
+
+
         txtTerms=view.findViewById(R.id.txtTerms);
         btn=view.findViewById(R.id.btnRead);
         txtTerms.setText("Hey there! We’re so happy to have you here. Before you dive in, here are a few simple things to keep in mind:\n" +
@@ -52,6 +59,8 @@ public class termsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().popBackStack();
+                //getActivity -->  دسترسی به اکتیویتی فعلی
+                //popBackStack -->  نمایش لایه زیرین به رو یعنی نمایش دوباره لایه ای که زیر این اکتیویتی بوده
             }
         });
 

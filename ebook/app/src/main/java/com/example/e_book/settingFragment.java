@@ -43,6 +43,9 @@ public class settingFragment extends Fragment {
                     getActivity().getWindow().getDecorView().setBackgroundColor(Color.RED);}
                 else if(checkedId==R.id.rdoBtnWhite){
                         getActivity().getWindow().getDecorView().setBackgroundColor(Color.WHITE);
+                        //getActivity -->  دسترسی به اکتیویتی فعلی
+                        //getWindow   -->  برای کنترل ویژگی های ویندو و تغییر رنگ بکگراند
+                        //getDecorview --> دسترسی کامل به لایه مورد نظر ما و تمام ویژگی های ان
                 }
                 else if(checkedId==R.id.rdoBtnGray){
                     getActivity().getWindow().getDecorView().setBackgroundColor(getResources().getColor(R.color.gray));

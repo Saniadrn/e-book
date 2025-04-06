@@ -31,16 +31,22 @@ public class MainActivity extends AppCompatActivity {
 
         setupView();
 
-        homeFragment homeFragment=new homeFragment();
+        homeFragment homeFragment=new homeFragment();// ساخت شی از فرگنت
         profileFragment profileFragment=new profileFragment();
         settingFragment settingFragment=new settingFragment();
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-
+            //به منظور پردازش انتخاب‌های منوی
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if(item.getItemId()==R.id.home_icon){
+                if(item.getItemId()==R.id.home_icon){//یعنی اگر بر روی آیتم خانه کلیک شده بود
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,homeFragment).commit();
+                    //1. getSupportFragmentManager()                       --> برای مدیریت فرگمنت ها
+                    //2. beginTransaction()                                -->  این شی به شما اجازه می‌دهد
+                    // تا تغییرات مختلفی مانند اضافه کردن،
+                    // جایگزینی یا حذف Fragment ها را در Activity خود انجام دهید.
+                    //3. replace(R.id.fragmentContainerView, homeFragment) --> این متد برای جایگزینی Fragment فعلی با یک Fragment جدید استفاده می‌شود.
+                    //4. commit()                                          --> عامل اجرا کننده
 
                 }
                 else if(item.getItemId()==R.id.profile_icon){

@@ -8,7 +8,7 @@ public class CustomListview {
         Image = image;
         this.txt = txt;
     }
-    public CustomListview() {
+    public CustomListview() {//constructor
     }
     public int getImage() {
         return Image;

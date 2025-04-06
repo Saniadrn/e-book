@@ -21,7 +21,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     public BookAdapter(Context context, int resource, ArrayList<Book> booklist){
         this.context=context;
         this.resource=resource;
-        this.booklist=booklist;
+        this.booklist=booklist;//constructor
     }
 
 
@@ -29,6 +29,8 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.ViewHolder>{
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        //getSystemService(context.LAYOUT_INFLATER_SERVICE)  --> دریافت می کند context.LAYOUT_INFLATER_SERVICE  را با استفاده از LayoutInflaterیک شی از
+
         View convertView=inflater.inflate(resource,parent,false);
         ViewHolder holder=new ViewHolder(convertView);
         return holder;

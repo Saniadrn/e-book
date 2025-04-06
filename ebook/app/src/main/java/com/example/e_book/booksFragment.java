@@ -25,11 +25,17 @@ public class booksFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_books, container, false);
+        //View view                 --> ساخت یک شی از کلاس View
+        //inflater.inflate          --> کار اصلی برنامه مارا انحام می دهد تبدیل فایل های لایه دیزاین(لایه رابط کاربری) به اشیا ویو
+        //container                 --> محل قرار گیری ویو های جدید را مشخص می کند که به صورت خودکار به ویو
+        // که انفلیت شده متصل نمی شود و پارامتر بعدی این مورد را تعییت می کند
+        //attachToRoot : false      -->  متصل نشودcontainer یعنی ویو انفایت شده بلافاصله به
 
         rv=view.findViewById(R.id.rv1);
 
         rv.setLayoutManager(new GridLayoutManager(getContext(),2));
-
+        //1. setLayoutManager                       -->  LayoutManager مسئول مدیریت چیدمان و موقعیت‌یابی آیتم‌ها در RecyclerView است
+        //2. new GridLayoutManager(getContext(), 2) --> ست کردن یک لایه شطرنجی که پارامتر اول لایه فعلی و پارامتر دوم تعداد ستون
         Bundle bundle=getArguments();
         String genre=bundle.getString("genre");
         if(genre.equals("Mystery")){
@@ -53,6 +59,8 @@ public class booksFragment extends Fragment {
     }
 
     private void fillListComics() {
+        //یک اریلیست از نوع بوک درست کردیم و بعد یک تایتل و عکس و ادرس پی دی اف به ان اختصاص دادیم
+
         booklist=new ArrayList<Book>();
         booklist.add(new Book("دوست خانواده",R.drawable.dostekhanevade,"https://dorsafaham.com/%d8%af%d9%88%d8%b3%d8%aa%e2%80%8c%d8%ae%d8%a7%d9%86%d9%88%d8%a7%d8%af%d9%87-%d8%af%d8%a7%d8%b3%d8%aa%d8%a7%db%8c%d9%81%d8%b3%da%a9%db%8c-@lbookl.pdf"));
         booklist.add(new Book("داستان خرس های پاندا",R.drawable.dastanekhershayepanda,"https://dorsafaham.com/%d8%af%d8%a7%d8%b3%d8%aa%d8%a7%d9%86%e2%80%8c%d8%ae%d8%b1%d8%b3%e2%80%8c%d9%87%d8%a7%db%8c%e2%80%8c%d9%be%d8%a7%d9%86%d8%af%d8%a7-@lbookl.pdf\n"));
@@ -71,6 +79,8 @@ public class booksFragment extends Fragment {
     }
 
     private void fillListFantasy() {
+        //یک اریلیست از نوع بوک درست کردیم و بعد یک تایتل و عکس و ادرس پی دی اف به ان اختصاص دادیم
+
         booklist=new ArrayList<Book>();
         booklist.add(new Book("ژرفنا",R.drawable.zherfna,"https://dorsafaham.com/%da%98%d8%b1%d9%81%d9%86%d8%a7-%d8%ac%d9%88%d8%ac%e2%80%8c%d8%a7%d9%88%d8%b1%d9%88%d9%84-@lbookl.pdf\n"));
         booklist.add(new Book("پدر پولدار پدر بی پول",R.drawable.pedarbipool,"https://dorsafaham.com/%d9%be%d8%af%d8%b1%e2%80%8c%d9%be%d9%88%d9%84%d8%af%d8%a7%d8%b1%e2%80%8c%d9%be%d8%af%d8%b1%e2%80%8c%d8%a8%db%8c%e2%80%8c%d9%be%d9%88%d9%84_%d8%b1%d8%a7%d8%a8%d8%b1%d8%aa%e2%80%8c%da%a9%db%8c%d9%88%d8%b3%d8%a7%da%a9%db%8c_@lbookl.pdf"));
@@ -87,6 +97,8 @@ public class booksFragment extends Fragment {
     }
 
     private void fillListRomance() {
+        //یک اریلیست از نوع بوک درست کردیم و بعد یک تایتل و عکس و ادرس پی دی اف به ان اختصاص دادیم
+
         booklist=new ArrayList<Book>();
         booklist.add(new Book("خروج اضطراری",R.drawable.khorojezterari,"https://dorsafaham.com/%d8%ae%d8%b1%d9%88%d8%ac%e2%80%8c%d8%a7%d8%b6%d8%b7%d8%b1%d8%a7%d8%b1%db%8c_%d8%a7%db%8c%d9%86%db%8c%d8%a7%d8%aa%d8%b3%db%8c%d9%88%d8%b3%db%8c%d9%84%d9%88%d9%86%d9%87_@lbookl.pdf\n"));
         booklist.add(new Book("خودشناسی به روش یونگ",R.drawable.khodshenasi,"https://dorsafaham.com/%d8%ae%d9%88%d8%af%d8%b4%d9%86%d8%a7%d8%b3%db%8c%e2%80%8c%d8%a8%d9%87%e2%80%8c%d8%b1%d9%88%d8%b4%e2%80%8c%db%8c%d9%88%d9%86%da%af_%d9%85%d8%a7%db%8c%da%a9%d9%84%e2%80%8c%d8%af%d8%a7%d9%86%db%8c%d9%84%d8%b2_@lbookl.pdf\n"));
@@ -105,6 +117,7 @@ public class booksFragment extends Fragment {
 
 
     private void fillListMystery() {
+        //یک اریلیست از نوع بوک درست کردیم و بعد یک تایتل و عکس و ادرس پی دی اف به ان اختصاص دادیم
         booklist=new ArrayList<Book>();
         booklist.add(new Book("آخرین روز یک محکوم",R.drawable.thelastdayofacondemnedman,"https://dorsafaham.com/%d8%a2%d8%ae%d8%b1%db%8c%d9%86%e2%80%8c%d8%b1%d9%88%d8%b2%e2%80%8c%db%8c%da%a9%e2%80%8c%d9%85%d8%ad%da%a9%d9%88%d9%85_%d9%88%db%8c%da%a9%d8%aa%d9%88%d8%b1%e2%80%8c%d9%87%d9%88%da%af%d9%88.pdf"));
         booklist.add(new Book("آنشرلی با موهای قرمز",R.drawable.anesherly,"https://dorsafaham.com/%d8%a2%d9%86%e2%80%8c%d8%b4%d8%b1%d9%84%db%8c%e2%80%8c%d8%a8%d8%a7%e2%80%8c%d9%85%d9%88%d9%87%d8%a7%db%8c%e2%80%8c%d9%82%d8%b1%d9%85%d8%b2_%d9%85%d9%88%d9%86%d8%aa%da%af%d9%85%d8%b1%db%8c_@lbookl.pdf"));
